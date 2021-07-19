@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { CarteleraResponse } from './interfaces/cartelera-response';
-import { PeliculasService } from './services/peliculas.service';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +8,4 @@ import { PeliculasService } from './services/peliculas.service';
 export class AppComponent {
   title = 'peliculasApp';
 
-  constructor(private peliculasService: PeliculasService){
-
-    this.peliculasService.getCartelera()
-        .subscribe( resp =>{
-          console.log(resp);          
-        });
-
-  }
 }
